@@ -70,5 +70,7 @@ Contribuições são bem-vindas. Sinta-se à vontade para fazer um fork do repos
 
 ## Alunos
 
--[Igor de Almeida Verneque]: Estudante do curso de Desenvolvimento de Sistemas.
--[Laura Assis Andrela]: Estudante do curso de Desenvolvimento de Sistemas.
+- [Igor de Almeida Verneque]: Estudante do curso de Desenvolvimento de Sistemas.
+
+
+- [Laura Assis Andrela]: Estudante do curso de Desenvolvimento de Sistemas.
