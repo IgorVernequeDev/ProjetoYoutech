@@ -68,6 +68,7 @@ Contribuições são bem-vindas. Sinta-se à vontade para fazer um fork do repos
 
 © [2023] Sesi Senai Itapeva
 
-## Aluno
+## Alunos
 
--[Igor de Almeida Verneque]: Estudante do cuso de Desenvolvimento de Sistemas.
+-[Igor de Almeida Verneque]: Estudante do curso de Desenvolvimento de Sistemas.
+-[Laura Assis Andrela]: Estudante do curso de Desenvolvimento de Sistemas.
