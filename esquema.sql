@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS vagas (
+id INTEGER PRIMARY KEY,
+cargo TEXT NOT NULL,
+localizacao TEXT NOT NULL,
+tipo_vaga TEXT NOT NULL,
+sobre TEXT NOT NULL,
+requisitos TEXT NOT NULL,
+salario REAL NOT NULL,
+email TEXT NOT NULL,
+imagem TEXT NOT NULL
+);

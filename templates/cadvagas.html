@@ -1,0 +1,86 @@
+{% extends 'modelo.html' %}
+{% block conteudo %}
+<div><a href="/adm"><button class="btn m-4" style="background-color: #00F5FF; color: white;">Voltar</button></a></div>
+<div class="row container m-5">
+  <div class="col justify-content-center text-center">
+    <img src="../static/img/smiley-man-work-medium-shot.jpg">
+  </div>
+  <form enctype="multipart/form-data" class="col-sm-10 col-md-8 col-lg-6 text-center needs-validation ms-4"
+    action="/cadastro" method="post" novalidate>
+    <div class="form-floating mb-2">
+      <input type="text" name="cargo" id="cargo" class="form-control" placeholder="" autofocus maxlength="30" autofocus required>
+      <label for="cargo">Cargo da vaga disponível:</label>
+      <div class="invalid-feedback">Você deve informar o nome do cargo</div>
+    </div>
+    <div class="form-floating mb-2">
+      <input type="text" class="form-control" id="localizacao" name="localizacao"
+        placeholder=""  autofocus maxlength="40" autofocus required>
+        <label for="localizacao" class="form-label">Local da empresa:</label>
+      <div class="invalid-feedback">Você deve informar o local da empresa</div>
+    </div>
+    <div class="form-floating mb-2">
+      <input type="text" class="form-control" id="tipo_vaga" name="tipo_vaga"
+        placeholder="" maxlength="15" autofocus required>
+        <label for="tipo_vaga" class="form-label">Tipo de trabalho:</label>
+      <div class="invalid-feedback">Você deve informar o tipo de trabalho</div>
+    </div>
+    <div class="form-floating mb-2">
+      <textarea class="form-control" id="sobre" name="sobre" rows="3" style="resize:none;"
+        placeholder="" autofocus maxlength="70" required></textarea>
+        <label for="sobre" class="form-label">Sobre a vaga:</label>
+      <div class="invalid-feedback">Você deve informar sobre a vaga</div>
+    </div>
+    <div class="form-floating mb-2">
+      <textarea class="form-control" id="requisitos" name="requisitos" rows="3" style="resize:none;"
+        placeholder="Exigências do cargo" autofocus maxlength="70" required></textarea>
+        <label for="requisitos" class="form-label">Requisitos:</label>
+      <div class="invalid-feedback">Você deve informar os requisitos da vaga</div>
+    </div>
+    <div class="form-floating mb-2">
+      <input type="number" name="salario" id="salario" class="form-control" id="salario" placeholder="R$0,00 - R$0,00" autofocus maxlength="10" autofocus required>
+      <label for="salario" class="form-label">Faixa de salário:</label>
+      <div class="invalid-feedback">Você deve informar a faixa de salário</div>
+    </div>
+    <div class="form-floating mb-2">
+      <input type="email" name="email" class="form-control" id="exampleFormControlInput1"
+        placeholder="nome@exemplo.com" autofocus maxlength="40" autofocus required>
+        <label for="email" class="form-label">Email do contratante</label>
+      <div class="invalid-feedback">Você deve informar o email do contratante</div>
+    </div>
+    <div class="col-12 col-md-7">
+      <div class="input-group m2-3">
+          <span class="input-group-text"><i class="bi bi-file-image"></i></span>
+          <div class="form-floating">
+              <input type="file" name="imagem" id="imagem" class="form-control" required
+                  accept="image/jpeg,image/png" style="width: 585px;">
+              <div class="invalid-feedback">
+                  Você deve enviar a foto do produto
+              </div>
+          </div>
+      </div>
+  </div>
+    <button type="submit" class="mt-5 btn p-2 justify-content-center" style="background-color: #00F5FF; color: white;" value="Cadastrar">Cadastrar</button>
+  </form>
+</div>
+<script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (() => {
+    'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
+</script>
+{% endblock %}

@@ -1,0 +1,69 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+}
+
+main {
+    min-height: 850px;
+    background:#fdf9f0;
+}
+
+form {
+    width:50%;
+}
+
+.col {
+    width:50%;
+}
+
+.col img {
+    width: 600px;
+    border-radius: 10%;
+}
+
+footer {
+    background-color: #2a494d;
+}
+
+.animation {
+    font-size: 40px;
+    animation: bounce 2s infinite;
+    padding-left: 5%;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+button {
+    color: white;
+    transform: translateX(0) scale(1.0);
+  }
+  
+  button:hover,
+  button:focus {
+    transform: translateX(1px) scale(1.2);
+    
+  }
+  .caixa {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  nav {
+    height: 80px;
+  }
+  .filtro {
+    transform: translateX(0) scale(1.0);
+  }
+  
+  .filtro:hover,
+  .filtro:focus {
+    transform: translateX(1px) scale(1.2);
+  }

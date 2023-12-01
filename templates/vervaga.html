@@ -1,0 +1,25 @@
+{% extends 'modelo.html' %}
+{% block conteudo %}
+<div><a href="/"><button class="btn m-4" style="background-color: #00F5FF; color: white;">Voltar</button></a></div>
+  <div class="d-flex m-5 p-1" style="background-color: #2a494d; border-radius: 1em; height: 500px;">
+    {% for vaga in vagas %}
+    <div class="row d-flex justify-content-center">
+      <div class="col-12 col-sm-5 d-flex align-items-center">
+        <div class="img_form m-3">
+          <img class="w-100 rounded" src="../static/img/vagas/{{ vaga['imagem'] }}" style="width: 1500px; height: 400px;">
+        </div>
+      </div>
+      <div class="col-12 col-sm-7 p-5">
+        <p class="text-white fs-1 text-center"><strong>Cargo: </strong>{{ vaga['cargo'] }}</p>
+        <p class="text-white fs-5"><strong>Localização: </strong>{{ vaga['localizacao'] }}</p>
+        <p class="text-white fs-5"><strong>Tipo de Vaga: </strong>{{ vaga['tipo_vaga'] }}</p>
+        <p class="text-white fs-5"><strong>Sobre a Vaga: </strong>{{ vaga['sobre'] }}</p>
+        <p class="text-white fs-5"><strong>Requisitos: </strong>{{ vaga['requisitos'] }}</p>
+        <p class="text-white fs-5"><strong>Salário: </strong>R$ {{ vaga['salario'] }}</p>
+        <p class="text-white fs-5"><strong>Email do Contratante: </strong>{{ vaga['email'] }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+{% endblock %}

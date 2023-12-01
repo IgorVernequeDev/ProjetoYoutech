@@ -1,0 +1,52 @@
+{% extends 'modelo.html' %}
+{% block conteudo %}
+{% if not(vagas) %}
+<div class="container text-center m-5">
+    <div class="row g-3 m-3">
+        <div class="m-5">
+            <button type="button" onclick="window.location.href='/cadvagas'" class="btn btn-lg m-5"
+                style="background-color: #00FCA8; color: white;">Cadastrar</button>
+            <button type="button" onclick="window.location.href='/logout'" class="btn btn-lg"
+                style="background-color: #00F5FF; color: white;">Sair</button>
+            <h1 class="text-success text-center text-black animation me-5">Bem vindo (a)!</h1>
+            <h1 class="text-danger text-center text-black m-4 animation me-5">Não há vagas cadastradas!</h1>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="container text-center my-5">
+    <ul class="container text-center my-5">
+        <div class="row g-3 m-3">
+            <div class="container text-center d-flex justify-content-around mx-5">
+                <button type="button" onclick="window.location.href='/cadvagas'" class="btn btn-lg"
+                    style="background-color: #00FCA8; color: white;">Cadastrar</button>
+                <button type="button" onclick="window.location.href='/logout'" class="btn btn-lg"
+                    style="background-color: #00F5FF; color: white;">Sair</button>
+            </div>
+            {% for vaga in vagas %}
+            <div class="col-12 col-md-10 col-lg-6 mx-auto border border-success rounded m-5 bg-white w-75">
+                <li class="list-group-item py-1 d-flex align-items-center">
+                    <div class="col-12 col-md-3 mh-100"><img src="../static/img/vagas/{{ vaga['imagem'] }}"
+                            class="img-thumbnail mh-100 border rounded border-success ms-5"
+                            style="width: 200px; height: 150px;">
+                    </div>
+                    <div class="col-12 col-md-5 ms-5" style="overflow: hidden; white-space: nowrap;">
+                        <h1 style="color: #2a494d;" class="fs-2">{{ vaga['cargo'] }}</h1>
+                        <p class="fs-5" style="color: #2a494d;">{{ vaga['tipo_vaga'] }}</p>
+                        <p style="color: #2a494d;" class="fs-5">R$ {{vaga['salario']}}</p>
+                    </div>
+                    <div class="col-12 col-md-4 d-flex m-5">
+                        <a href="/editar/{{ vaga['id'] }}" class="btn ms-1" style="background-color: #00F5FF;"> <i
+                                class="bi bi-pencil-square fs-5"></i></a>
+                        <a href="/excluir/{{ vaga ['id'] }}"
+                            onclick="return confirm('Você tem certeza de que deseja excluir essa vaga?')"
+                            class="btn mx-3" style="background-color: #00FCA8;"><i class="bi bi-trash fs-5"></i></a>
+                    </div>
+                </li>
+            </div>
+            {% endfor %}
+        </div>
+    </ul>
+    {% endif %}
+</div>
+{% endblock %}
