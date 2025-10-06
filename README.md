@@ -1,4 +1,5 @@
 # ProjetoYoutech
+![Imagem de capa](static/img/youtech.jpg)
 
 ## Descrição
 
