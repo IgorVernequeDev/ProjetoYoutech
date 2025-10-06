@@ -10,15 +10,15 @@
   <div class="row g-3">
     {% for vaga in vagas %}
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 m-3">
-      <div class="card text-center bg-light m-4" style="width: 220px; height: 470px;">
+      <div class="card text-center bg-light m-4" style="width: 220px; height: 0px;">
         <img src="../static/img/vagas/{{ vaga['imagem'] }}" class="card-img-top" style="width: 220px; height: 200px;">
-        <div class="card-header fs-3" style="color: #2a494d;">{{ vaga['cargo'] }}</div>
+        <div class="card-header fs-5" style="color: #2a494d;">{{ vaga['cargo'] }}</div>
         <div class="card-body">
           <h5 class="card-title" style="color: #2a494d;">{{ vaga['tipo_vaga'] }}</h5>
           <p style="color: #2a494d;">R$ {{vaga['salario']}}</p>
           <a href="/vervaga/{{ vaga['id'] }}" style="text-decoration: none;">
             <button
-              style="background-color: #2a494d; border-radius: 0.3em; color: white; font-size: 13px; padding: 2px; width: 100px; margin-right: 5px;"
+              style="background-color: #2a494d; border-radius: 0.3em; color: white; font-size: 13px; padding: 2px; width: 100px;"
               class="animacao">Veja mais >>>
             </button>
           </a>
